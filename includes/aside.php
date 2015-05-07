@@ -29,8 +29,8 @@
 	</div>
 
 	<div class="box">
-		<p><?php _e( 'Now accepting 5-star reviews!  It only takes seconds and it means a lot.', 'ageverify' ); ?></p>
-		<p><a href="http://wordpress.org" target="_blank" class="button submit-button button-primary">
+		<p><?php _e( 'We would love your feedback!  It only takes seconds and it means a lot.', 'ageverify' ); ?></p>
+		<p><a href="https://wordpress.org/support/view/plugin-reviews/ageverify" target="_blank" class="button submit-button button-primary">
 			<?php _e( 'Rate This Plugin Now', 'ageverify' ); ?>
 		</a></p>
 
