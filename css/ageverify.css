@@ -1,0 +1,121 @@
+/*
+CSS for AgeVerify Options page
+*/
+
+#ageverify th,
+#ageverify td {
+	width: 100%;
+	display: table-row;
+}
+
+#ageverify th {
+	font-size: 1.25em;
+	font-weight: normal;
+	text-decoration: underline;
+	padding-bottom: 10px;
+}
+
+#ageverify th {
+	border-bottom: 15px solid transparent;
+}
+
+#ageverify label,
+#ageverify #galleryButtons a {
+	display: inline-block;
+	color: #fff;
+	background: #00a0d2;
+	padding: 5px 15px;
+	margin: 0 10px 15px 0;
+}
+
+#ageverify #toggle-on {
+	background-color: none;
+	width: 100px;
+	height: 35px;
+	background: url( 'toggle.png' ) center -50px no-repeat;
+	text-indent: 200%; 
+	white-space: nowrap; 
+	overflow: hidden;
+}
+
+#ageverify #ageverify-gallery label {
+	padding: 2px;
+}
+
+#ageverify input:checked + label,
+#ageverify #galleryButtons #btnAll {
+	background: #82c240;
+}
+
+#ageverify input:checked + #toggle-on {
+	background-position: center top;
+}
+
+#ageverify #ageverify-gallery input:checked + label {
+	padding: 4px;
+}
+
+#ageverify input[type="radio"],
+#ageverify input[type="checkbox"] { /* HIDE RADIO BUTTONS */
+  visibility: hidden; /* Makes input not-clickable */
+  position: absolute; /* Remove input from document flow */
+}
+
+#ageverify #ageverify-gallery .galleryItem {
+	display: inline-block;
+	width: 30%;
+}
+
+#ageverify #ageverify-gallery .galleryItem img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+#ageverify #submit {
+	font-size: 1.9em;
+	padding: .5em 1em;
+	height: auto;
+}
+
+/*Sidebar*/
+
+#ageverify-sidebar .box {
+	background: #fff;
+	border: 1px solid #e6e6e6;
+	padding: 15px;
+	margin-bottom: 20px;
+}
+
+#ageverify-sidebar .box header {
+	background: #32373c;
+	color: #fff;
+	margin: -15px;
+	position: relative;
+	padding: 8px;
+	margin-bottom: 10px;
+}
+
+#ageverify-sidebar .box.go-pro header {
+	font-size: 1.6em;
+	text-align: center;
+}
+
+#ageverify-sidebar .box.go-pro p {
+	text-align: center;
+}
+
+#ageverify-sidebar .box.go-pro li {
+	color: #000;
+	margin-left: 1.5em;
+	list-style-image: url('check.png');
+}
+
+#ageverify-sidebar .box.resources li {
+	margin-left: 1.5em;
+	list-style-image: url('arrow.png');
+}
+
+#ageverify-sidebar .logo {
+	text-align: center;
+}
