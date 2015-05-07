@@ -2,7 +2,7 @@
 Contributors: ImbibeDigital
 Tags: age verification, age verify, over 18, over 21
 Requires at least: 3.8
-Tested up to: 4.2.1
+Tested up to: 4.2.2
 Stable tag: trunk
 License: GPL 2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -68,6 +68,8 @@ A: Yes, our service runs entirely over SSL (https) protocol.
 Q: Your plugin is awesome, how do I give you a high-five?
 A: Drop us a note and say hi here: https://ageverify.co/contact-us/
 
+== Screenshots ==
+1. Settings page
 
 
 == Changelog ==
