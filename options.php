@@ -18,7 +18,7 @@ function ageverify_delete_plugin_options() {
 function ageverify_add_defaults() {
 	$tmp = get_option('ageverify_options');
     if(!is_array($tmp)) {
-		delete_option('ageverify_options'); // so we don't have to reset all the 'off' checkboxes too! (don't think this is needed but leave for now)
+		delete_option('ageverify_options'); // so we don't have to reset all the 'off' checkboxes too! (dont think this is needed but leave for now)
 		$arr = array(	
 			"ageverify_on" => 0,
 			"ageverify_template" => "opaque",

@@ -23,18 +23,20 @@
 		<header>
 			<?php _e( 'Resources', 'ageverify' ); ?>
 		</header>
-		<ul id="resources">
-			<li><a href="https://ageverify.co/contact-us/" target="_blank"><?php _e( 'Contact Us', 'ageverify' ); ?></a></li>
-		</ul>
+		<p style="text-align:center;"><a href="https://ageverify.co/contact-us/" target="_blank"class="button submit-button button-primary"><?php _e( 'Contact Us', 'ageverify' ); ?></a>
+		</p>
 	</div>
 
 	<div class="box">
-		<p><?php _e( 'We would love your feedback!  It only takes seconds and it means a lot.', 'ageverify' ); ?></p>
-		<p><a href="https://wordpress.org/support/view/plugin-reviews/ageverify" target="_blank" class="button submit-button button-primary">
+    <header>
+			<?php _e( 'Feedback', 'ageverify' ); ?>
+		</header>
+		<p style="text-align:center;"><?php _e( 'We would love your feedback!  It only takes seconds and it means a lot.', 'ageverify' ); ?></p>
+		<p style="text-align:center;"><a href="https://wordpress.org/support/view/plugin-reviews/ageverify" target="_blank" class="button submit-button button-primary">
 			<?php _e( 'Rate This Plugin Now', 'ageverify' ); ?>
 		</a></p>
 
-	<div class="logo">
+	<div class="logo"><br />
 		<a href="http://imbibedigital.co/" target="_blank">
 			<img src="<?php echo plugins_url() . '/ageverify/includes/imbibe_logo.png'; ?>">
 		</a>

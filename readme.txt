@@ -8,7 +8,7 @@ License: GPL 2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 
-A Perfect Website Age Checker for Wineries, Bottleshops, Bars and Taverns
+A Perfect Website Age Checker for Wineries, Bottleshops, Vape Shops, Breweries, Bars and Distilleries
 
 == Description ==
 AgeVerify provides great looking website age verification for breweries, wineries, distilleries, bars, smoke shops, ecig, vape shops and more. 
@@ -51,16 +51,16 @@ Q: Do you have an ad-free version?
 A: Yes, you can upgrade to our Pro version located directly on our website here: https://ageverify.co.
 
 Q: Can I add my logo or edit any of the text?
-A: The basic version of AgeVerify does not offer this functionality but we would be happy to build a custom instance of AgeVerify for your business. For more information, check out: https://ageverify.co/custom-template/
+A: The basic version of AgeVerify does not currently offer this functionality but we would be happy to build a custom instance of AgeVerify for your business. For more information, check out: https://ageverify.co/custom-template/. 
 
 Q: Can I change the location of the underage redirect?
 A: The basic version of AgeVerify redirects to our home page. The Pro version which is available for purchase on our website redirects underage traffic to Google. Details located here: https://ageverify.co.
 
 Q: How long is the cookie duration?
-A: For the basic version, we set a 1 hour cookie for your website visitor. 
+A: For the basic version, we set a 1 hour cookie for your website visitor. If you elect to upgrade to the Pro version, the cookie is set for 72 hours. With a custom instance you can set it for any duration you choose. 
 
 Q: Will AgeVerify work on all of my website pages?
-A: Yes, by installing the AgeVerify plugin, your website visitors will be greeted with our great looking age verification prompt regardless of their entry page. Once the cookie is set, they will not be unnecessarily re-prompted.
+A: Yes, by installing the AgeVerify plugin, your website visitors will be greeted with our great looking age verification prompt regardless of their entry page. Once the cookie is set, they will not be unnecessarily re-prompted until their cookie has expired.
 
 Q: Is your service secure?
 A: Yes, our service runs entirely over SSL (https) protocol.
@@ -73,6 +73,11 @@ A: Drop us a note and say hi here: https://ageverify.co/contact-us/
 
 
 == Changelog ==
+= 1.1 =
+* Fixed bug with underage redirect location for international templates
+* Fixed bug for line-height issue on Date of Birth input method
+* Corrected layout of side bar options in the configuration page
+* Updates scripts to use a WordPress only version
 
 = 1.0 =
 * First release

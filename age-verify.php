@@ -1,11 +1,11 @@
 <?php
 /*
 Plugin Name: AgeVerify
-Plugin URI: http://ageverify.co
+Plugin URI: https://ageverify.co
 Description: Add age verification to your WordPress site, via AgeVerify
-Version: 1
+Version: 1.1
 Author: AgeVerify
-Author URI: http://ageverify.co
+Author URI: https://ageverify.co
 Text Domain: ageverify
 */
 
@@ -87,7 +87,7 @@ function ageverify_print_script() {
 	$options = get_option( 'ageverify_settings' );
 
 	if( !isset( $options['ageverify_on'] ) || "1" !== $options['ageverify_on'] ) {
-		// AgeVerify isn't turned on, so abort immediately
+		// AgeVerify isnt turned on, so abort immediately
 		return;
 	}
 
@@ -110,11 +110,11 @@ function ageverify_print_script() {
 	}
 
 	if( isset( $options['ageverify_method'] ) && 'mdy' == $options['ageverify_method'] && 'en' == $options['ageverify_language'] ) {
-		// this is cheating.  English is the only language with the mdy method available, and the method is appended to "js" just like the language is, so we'll just pretend mdy is the language
+		// this is cheating.  English is the only language with the mdy method available, and the method is appended to "js" just like the language is, so just pretend mdy is the language
 		$language = 'mdy';
 	}
 
-	$script = '<script type="text/javascript" src="https://av.ageverify.co/js' . $language . '/' . $template . '.' . $age . '.js"></script>';
+	$script = '<script type="text/javascript" src="https://av.ageverify.co/WPjs' . $language . '/' . $template . '.' . $age . '.js"></script>';
 
 	echo $script;
 }
