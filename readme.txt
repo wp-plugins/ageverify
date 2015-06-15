@@ -73,11 +73,22 @@ A: Drop us a note and say hi here: https://ageverify.co/contact-us/
 
 
 == Changelog ==
+= 1.3 =
+* Added Customize tab with information on custom AgeVerify instances along with a gallery of customers using custom instances of AgeVerify.
+
+= 1.2 = 
+* Added customization tab to settings page
+
 = 1.1 =
+
 * Fixed bug with underage redirect location for international templates
+
 * Fixed bug for line-height issue on Date of Birth input method
+
 * Corrected layout of side bar options in the configuration page
+
 * Updates scripts to use a WordPress only version
+
 
 = 1.0 =
 * First release

@@ -54,7 +54,7 @@ function ageverify_add_options_page() {
 		'AgeVerify', 
 		'AgeVerify', 
 		'manage_options', 
-		'/age-verify/options.php', 
+		'age-verify-options', 
 		'ageverify_render_options_page', 
 		plugin_dir_url( __FILE__ ) . '/includes/AVicon20.png', 
 		85.420
@@ -70,6 +70,7 @@ add_action( 'admin_init', 'ageverify_settings_init' );
 function ageverify_settings_init(  ) { 
 
 	register_setting( 'pluginPage', 'ageverify_settings' );
+	register_setting( 'customize', 'ageverify_settings' );
 
 	add_settings_section(
 		'ageverify_pluginPage_section', 
@@ -116,6 +117,14 @@ function ageverify_settings_init(  ) {
 		'ageverify_method_render', 
 		'pluginPage', 
 		'ageverify_pluginPage_section' 
+	);
+
+	// customize tab
+	add_settings_section(
+		'ageverify_customize_section', 
+		'', 
+		'ageverify_customize_section_callback', 
+		'customize'
 	);
 
 }
@@ -264,20 +273,115 @@ function ageverify_settings_section_callback(  ) {
 
 }
 
+function ageverify_customize_section_callback() { ?>
+	<?php add_thickbox(); ?> 
+	<div id="ageverify-customize">
+		<div id="ageverify-customize-header">
+			<h2><?php _e( 'Custom AgeVerify Designs', 'ageverify' ); ?></h2>
+			<p><?php _e( 'We build custom AgeVerify instances that meet the unique needs of your business and feature the importance of your brand. Review the features listed below and check out some of our recent custom work in the gallery.', 'ageverify' ); ?></p>
+		</div>
+		<div id="ageverify-custom-features">
+			<h3><?php _e( 'Features', 'ageverify' ); ?></h3>
+			<ul>
+				<li><?php _e( 'Use Any Background Image (one of our templates or provide your own)', 'ageverify' ); ?></li>
+			    <li><?php _e( 'Add your logo to the age-verification prompt', 'ageverify' ); ?></li>
+			    <li><?php _e( 'Choose Date of Birth Input method or Button Prompt method', 'ageverify' ); ?></li>
+			    <li><?php _e( 'Buttons are color-coded to match your website or logo', 'ageverify' ); ?></li>
+			    <li><?php _e( 'SSL (https) is included', 'ageverify' ); ?></li>
+			    <li><?php _e( 'Specify location of underage redirect (default is Google)', 'ageverify' ); ?></li>
+			    <li><?php _e( 'Modify any of the text', 'ageverify' ); ?></li>
+			    <li><?php _e( 'Specify cookie length (time in between age-verification prompts per user)', 'ageverify' ); ?></li>
+			    <li><?php _e( 'Ads and links to Age-Verify are removed', 'ageverify' ); ?></li>
+				<li><?php _e( 'Already using Age-Verify Pro? We’ll happily credit the full price of your Pro instance towards a new custom instance.', 'ageverify' ); ?></li>
+			</ul>
+            <div style="text-align:center;padding-top:20px;padding-bottom:20px;"><a href="https://ageverify.co/custom-template/" target="_blank" style="padding:10px; color:#fff;background-color:#0C0;box-shadow:2px 3px 7px #999;text-decoration:none;font-size:18px;">Get Started</a></div>
+		</div>
+		<div id="ageverify-custom-examples">
+			<div class="ageverify-custom-example">
+				<a class="thickbox" href="<?php echo plugins_url(); ?>/ageverify/includes/custom_ElysianFull.jpg">
+					<img src="<?php echo plugins_url(); ?>/ageverify/includes/custom_ElysianFull.jpg">
+				</a>
+				<span class="caption"><a href="http://www.elysianbrewing.com/" target="_blank"><?php _e( 'Elysian Brewing', 'ageverify' ); ?></a></span>
+			</div>
+			<div class="ageverify-custom-example">
+				<a class="thickbox" href="<?php echo plugins_url(); ?>/ageverify/includes/custom_sikuvodka.jpg">
+					<img src="<?php echo plugins_url(); ?>/ageverify/includes/custom_sikuvodka.jpg">
+				</a>
+				<span class="caption"><a href="http://www.sikuvodka.com/" target="_blank"><?php _e( 'Siku Glacier Ice Vodka', 'ageverify' ); ?></a></span>
+			</div>
+			<div class="ageverify-custom-example">
+				<a class="thickbox" href="<?php echo plugins_url(); ?>/ageverify/includes/custom_vaporkick.jpg">
+					<img src="<?php echo plugins_url(); ?>/ageverify/includes/custom_vaporkick.jpg">
+				</a>
+				<span class="caption"><a href="http://vaporkick.com/" target="_blank"><?php _e( 'VaporKick E-Juice', 'ageverify' ); ?></a></span>
+			</div>
+			<div class="ageverify-custom-example">
+				<a class="thickbox" href="<?php echo plugins_url(); ?>/ageverify/includes/custom_potocoffee1.jpg">
+					<img src="<?php echo plugins_url(); ?>/ageverify/includes/custom_potocoffee1.jpg">
+				</a>
+				<span class="caption"><a href="http://potocoffee.coffee/" target="_blank"><?php _e( 'Pot O Coffee – Cannabis Coffee', 'ageverify' ); ?></a></span>
+			</div>
+			<div class="ageverify-custom-example">
+				<a class="thickbox" href="<?php echo plugins_url(); ?>/ageverify/includes/custom_lostrhino.jpg">
+					<img src="<?php echo plugins_url(); ?>/ageverify/includes/custom_lostrhino.jpg">
+				</a>
+				<span class="caption"><a href="http://www.lostrhino.com/" target="_blank"><?php _e( 'Lost Rhino Brewing', 'ageverify' ); ?></a></span>
+			</div>
+			<div class="ageverify-custom-example">
+				<a class="thickbox" href="<?php echo plugins_url(); ?>/ageverify/includes/custom_mcbride.jpg">
+					<img src="<?php echo plugins_url(); ?>/ageverify/includes/custom_mcbride.jpg">
+				</a>
+				<span class="caption"><a href="http://www.mcbridesisters.com/" target="_blank"><?php _e( 'McBride Sisters Winery', 'ageverify' ); ?></a></span>
+			</div>
+			<div class="ageverify-custom-example">
+				<a class="thickbox" href="<?php echo plugins_url(); ?>/ageverify/includes/custom_growspace.jpg">
+					<img src="<?php echo plugins_url(); ?>/ageverify/includes/custom_growspace.jpg">
+				</a>
+				<span class="caption"><a href="http://growspacestorage.com/" target="_blank"><?php _e( 'Grow Space Storage', 'ageverify' ); ?></a></span>
+			</div>
+			<div class="ageverify-custom-example">
+				<a class="thickbox" href="<?php echo plugins_url(); ?>/ageverify/includes/custom_havanaphils.jpg">
+					<img src="<?php echo plugins_url(); ?>/ageverify/includes/custom_havanaphils.jpg">
+				</a>
+				<span class="caption"><a href="http://www.havanaphils.com/" target="_blank"><?php _e( 'Havana Phil’s Cigar Company', 'ageverify' ); ?></a></span>
+			</div>
+		</div>
+	</div>
+
+<?php }
+
 
 // Render the Plugin options form
 function ageverify_render_options_page() {
 	?>
+
 	<div class="wrap">
 		<h2><?php _e('AgeVerify Configuration', 'ageverify'); ?></h2>
 		<?php settings_errors(); ?>
+
+		<?php  
+                $active_tab = isset( $_GET[ 'tab' ] ) ? $_GET[ 'tab' ] : 'pluginPage';  
+        ?> 
+
+        <h2 class="nav-tab-wrapper">  
+            <a href="?page=age-verify-options&tab=pluginPage" class="nav-tab <?php echo $active_tab == 'pluginPage' ? 'nav-tab-active' : ''; ?>"><?php _e( 'Settings', 'ageverify' ); ?></a>  
+            <a href="?page=age-verify-options&tab=customize" class="nav-tab <?php echo $active_tab == 'customize' ? 'nav-tab-active' : ''; ?>"><?php _e( 'Customize', 'ageverify' ); ?></a>  
+        </h2> 
+
 		<div id="ageverify" style="width: 75%; min-width: 350px; float: left;">
 			<!-- Beginning of the Plugin Options Form -->
 			<form method="post" action="options.php">
-				<?php
-				settings_fields( 'pluginPage' );
-				do_settings_sections( 'pluginPage' );
-				submit_button();
+				<?php 
+	            if( $active_tab == 'pluginPage' ) {  
+	                settings_fields( 'pluginPage' );
+					do_settings_sections( 'pluginPage' ); 
+					submit_button();
+	            } else if( $active_tab == 'customize' ) {
+	                settings_fields( 'customize' );
+	                do_settings_sections( 'customize' ); 
+
+	            }
+				
 				?>
 			</form>
 

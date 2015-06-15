@@ -3,7 +3,7 @@
 Plugin Name: AgeVerify
 Plugin URI: https://ageverify.co
 Description: Add age verification to your WordPress site, via AgeVerify
-Version: 1.1
+Version: 1.3
 Author: AgeVerify
 Author URI: https://ageverify.co
 Text Domain: ageverify
@@ -66,7 +66,7 @@ add_action('init', 'ageverify_language_init');
 
 // Enqueue CSS on settings page
 function enqueue_ageverify_options_css($hook) {
-    if ( 'toplevel_page_age-verify/options' != $hook ) {
+    if ( 'toplevel_page_age-verify-options' != $hook ) {
         return;
     }
 
